@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "vite --port ${PORT:-12493}",
+    "preview": "vite preview --port ${PORT:-12493}",
+      "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
   "devDependencies": {
@@ -17,5 +17,12 @@
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
   },
-  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "dependencies": {
+    "@google/genai": "^0.10.0",
+    "@stablelib/base64": "^2.0.1",
+    "@tailwindcss/vite": "^4.1.4",
+    "idb-keyval": "^6.2.1",
+    "tailwindcss": "^4.1.4"
+  }
 }
