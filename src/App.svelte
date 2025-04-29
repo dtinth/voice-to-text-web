@@ -320,7 +320,7 @@
 
   const copyTranscript = () => {
     if (!$transcript) return;
-    navigator.clipboard.writeText($transcript);
+    navigator.clipboard.writeText($transcript.trim());
     // Replace alert with temporary checkmark
     showCopySuccess = true;
     setTimeout(() => {
